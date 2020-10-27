@@ -12,6 +12,18 @@ img {
   vertical-align: bottom;
 }
 
+body {
+  background-color: #f6f6f6;
+  color: #333333;
+}
+
+p {
+  font-size: 1.6rem;
+  font-family: "Hiragino Sans", "游ゴシック体";
+  line-height: 1.7;
+  letter-spacing: 0.05rem;
+}
+
 /*------------------------
 main
 -------------------------*/
@@ -82,5 +94,210 @@ main
   position: absolute;
   top: 240px;
   left: 554px;
+}
+
+.content-left {
+  width: calc(1920px - (360px + (1920px - 100vw) / 2));
+  height: 766px;
+  background-color: #fff;
+  margin-top: 90px;
+  -webkit-box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.16);
+          box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+
+.content-left::before {
+  content: "";
+  width: 1240px;
+  height: 65%;
+  position: absolute;
+  bottom: -80px;
+  right: -60px;
+  background: rgba(138, 224, 242, 0.6);
+  z-index: -2;
+}
+
+.content-left::after {
+  content: "ABOUT";
+  font-size: 15rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: rgba(70, 201, 229, 0.1);
+  mix-blend-mode: multiply;
+  font-family: "Noto Serif", "Merriweather", "Helvetica", "Arial", sans-serif;
+  position: absolute;
+  bottom: -65px;
+  left: 58%;
+}
+
+.content-left__inner {
+  width: 1200px;
+  margin: 0 0 0 auto;
+  padding: 0 80px 125px;
+}
+
+.content-left .title-container {
+  padding-top: 75px;
+}
+
+.content-left .title-container .section-title {
+  font-size: 3rem;
+  font-weight: normal;
+  letter-spacing: 0.3rem;
+  position: relative;
+  text-align: center;
+}
+
+.content-left .title-container .section-title::before, .content-left .title-container .section-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 60px;
+  height: 4px;
+  background-color: #46c9e5;
+}
+
+.content-left .title-container .section-title::before {
+  left: 35%;
+}
+
+.content-left .title-container .section-title::after {
+  right: 35%;
+}
+
+.content-left__container {
+  margin-top: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content-left .profile-card {
+  width: 285px;
+  height: 412px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+  text-align: center;
+}
+
+.content-left .profile-card__face {
+  display: block;
+  border-radius: 50%;
+  width: 168px;
+  height: 168px;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 40px;
+}
+
+.content-left .profile-card .level4-heading {
+  font-family: "Hiragino Sans", "游ゴシック体";
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  position: relative;
+}
+
+.content-left .profile-card .level4-heading::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  display: inline-block;
+  width: 50px;
+  height: 4px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #46c9e5;
+}
+
+.content-left .profile-card__level4-heading {
+  margin-top: 25px;
+}
+
+.content-left .profile-card .btn {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #8ddce7;
+  width: 220px;
+  height: 60px;
+  border-radius: 8px;
+  line-height: 60px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  font-family: "Hiragino Sans", "游ゴシック体";
+  color: #fff;
+}
+
+.content-left .profile-card__btn {
+  margin-top: 50px;
+}
+
+.content-left__profile-card {
+  margin-right: 80px;
+  margin-left: 100px;
+}
+
+.content-left .profile-detail {
+  width: 550px;
+  height: 470px;
+  text-align: center;
+}
+
+.content-left .profile-detail .level3-heading {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  color: #494949;
+  /*文字色*/
+  background: transparent;
+  /*背景透明に*/
+  border-left: solid 5px #46c9e5;
+  /*左線*/
+  padding: 0.4rem 1.3rem 0.4rem;
+}
+
+.content-left .profile-detail__level3-heading {
+  margin-bottom: 40px;
+}
+
+.content-left .profile-detail__text {
+  text-align: left;
+}
+
+.content-left .profile-detail .mt-50 {
+  margin-top: 50px;
+}
+
+.content-left .skills {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content-left .skills__item .fab {
+  font-size: 8rem;
+}
+
+.content-left .skills__item img {
+  width: 80px;
+  height: 80px;
+}
+
+.content-left .skills__title {
+  font-family: "Merriweather", "Noto Serif", "Helvetica", "Arial", sans-serif;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */
