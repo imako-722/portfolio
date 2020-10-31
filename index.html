@@ -44,13 +44,13 @@
     </section>
     <!-- jumbotron -->
 
-    <section class="content-left">
-      <div class="content-left__inner">
+    <section class="content-about">
+      <div class="content-about__inner">
         <div class="title-container">
-          <h2 class="content-left__title section-title">ABOUT</h2>
+          <h2 class="content-about__title section-title">ABOUT</h2>
         </div>
-        <div class="content-left__container">
-          <div class="profile-card content-left__profile-card">
+        <div class="content-about__container">
+          <div class="profile-card content-about__profile-card">
             <figure>
               <img
                 class="profile-card__face"
@@ -59,10 +59,14 @@
               />
             </figure>
 
-            <h4 class="level4-heading profile-card__level4-heading">imako</h4>
-            <a href="#" class="profile-card__btn btn">SNS & detail profile</a>
+            <h4 class="level4-heading--en profile-card__level4-heading">
+              imako
+            </h4>
+            <a href="#" class="profile-card__btn btn--en"
+              >SNS & detail profile</a
+            >
           </div>
-          <div class="profile-detail content-left__profile-detail">
+          <div class="profile-detail content-about__profile-detail">
             <h3 class="level3-heading profile-detail__level3-heading">
               PROFILE
             </h3>
@@ -98,7 +102,130 @@
         </div>
       </div>
     </section>
-    <!-- 左からのコンテンツ -->
+    <!-- content-about(left) -->
+
+    <section class="content-services">
+      <div class="content-services__inner">
+        <div class="title-container">
+          <h2 class="content-services__title section-title">SERVICES</h2>
+        </div>
+        <ul class="content-services__service-list service-list">
+          <li class="service-list__item service-list-item">
+            <div class="service-list__container">
+              <i class="fas fa-code service-list__icon"></i>
+              <h3 class="level3-heading--ja service-list__level3-heading">
+                コーディング代行
+              </h3>
+              <p class="service-list__text">
+                Webサイトのデザインデータをお預かりし、お客様のご要望通りにコーディングをさせていただきます。また、SEO内部対策として適切なマークアップもさせていただきます。
+              </p>
+            </div>
+          </li>
+          <li class="service-list__item">
+            <div class="service-list__container">
+              <i class="fas fa-mobile-alt service-list__icon"></i>
+              <h3 class="level3-heading--ja service-list__level3-heading">
+                スマホ対応
+              </h3>
+              <p class="service-list__text">
+                現在、Webサイトの閲覧はスマートフォンで行われることが一般的です。もはや、スマートフォン端末への対応は必須と言えるでしょう。どの端末で見てもデザインが崩れないようなレスポンシブなWebページを作成させていただきます。
+              </p>
+            </div>
+          </li>
+          <li class="service-list__item">
+            <div class="service-list__container">
+              <i class="fas fa-tools service-list__icon"></i>
+              <h3 class="level3-heading--ja service-list__level3-heading">
+                メンテナンス
+              </h3>
+              <p class="service-list__text">
+                効果が期待できるWebサイトを維持するためには、更新やメンテナンスが非常に大切になります。写真の差し替え、デザインの変更など、お客様のご要望に対応させていただきます。
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- content-services(right) -->
+
+    <section class="content-works">
+      <div class="content-works__inner">
+        <div class="title-container">
+          <h2 class="content-works__title section-title">WORKS</h2>
+        </div>
+        <ul class="content-works__card-list card-list">
+          <li class="card-list__card">
+            <div class="card-list__inner">
+              <div class="card-list__image-container">
+                <img
+                  class="card-list__image"
+                  src="/images/card-img01.jpg"
+                  alt="face"
+                />
+              </div>
+
+              <h4 class="level4-heading--ja card-list__level4-heading">
+                シンプルなホームページ
+              </h4>
+              <p class="card-list__text">「模写」</p>
+              <a href="#" class="card-list__btn btn">表示</a>
+            </div>
+          </li>
+          <li class="card-list__card">
+            <div class="card-list__inner">
+              <div class="card-list__image-container">
+                <img
+                  class="card-list__image"
+                  src="/images/card-img02.jpg"
+                  alt="face"
+                />
+              </div>
+
+              <h4 class="level4-heading--ja card-list__level4-heading">
+                コーポレートサイト
+              </h4>
+              <p class="card-list__text">「模写」</p>
+              <a href="#" class="card-list__btn btn">表示</a>
+            </div>
+          </li>
+          <li class="card-list__card">
+            <div class="card-list__inner">
+              <div class="card-list__image-container">
+                <img
+                  class="card-list__image"
+                  src="/images/card-img03.jpg"
+                  alt="face"
+                />
+              </div>
+
+              <h4 class="level4-heading--ja card-list__level4-heading">
+                Airbnb様
+              </h4>
+              <p class="card-list__text">「模写」</p>
+              <a href="#" class="card-list__btn btn">表示</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-contact clearfix">
+      <div class="title-container">
+        <h2 class="content-contact__title section-title">CONTACT</h2>
+      </div>
+      <div class="content-contact__inner">
+        <form action="" class="content-contact__form form">
+          <div class="form__inner">
+            <div class="form__input-container">
+              <input type="text" name="your-name" class="form__name" />
+              <input type="text" name="your-email" class="form__email" />
+            </div>
+            <textarea name="your-message" class="form__text"></textarea>
+          </div>
+          <input type="button" class="btn form__btn" />
+        </form>
+      </div>
+    </section>
 
     <footer></footer>
     <!--フッター-->
