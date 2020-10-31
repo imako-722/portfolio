@@ -71,9 +71,13 @@ header
     &__item {
       font-size: 1.8rem;
       font-weight: bold;
-      color: #8ddce7;
       letter-spacing: 0.05rem;
       margin-right: 35px;
+
+      a {
+        text-decoration: none;
+        color: #8ddce7;
+      }
     }
     @media screen and (max-width: 768px) {
       display: none;
@@ -129,8 +133,61 @@ content-about(left)
     display: flex;
     justify-content: space-around;
   }
+
+  .spin-card {
+    width: 285px;
+    height: 412px;
+    perspective: 1500px;
+
+    &__content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+    }
+
+    .more {
+      display: none;
+
+      &:checked ~ .spin-card__content {
+        transform: rotateY(180deg);
+      }
+    }
+
+    &__front,
+    &__back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      border-radius: 6px;
+    }
+
+    &__back {
+      transform: rotateY(180deg);
+    }
+
+    &__front {
+      transform: translateZ(80px) scale(0.94);
+    }
+
+    &__inner {
+      transform: translateZ(80px) scale(0.94);
+      height: 100%;
+    }
+  }
+
+  &__spin-card {
+    margin-right: 80px;
+    margin-left: 100px;
+  }
+
   .profile-card {
-    @include card(285px, 412px);
+    @include card(100%, 100%);
 
     &__face {
       display: block;
@@ -181,10 +238,89 @@ content-about(left)
     }
   }
 
-  &__profile-card {
-    margin-right: 80px;
-    margin-left: 100px;
+  .detail-profile-card {
+    @include card(100%, 100%);
+    // background-color: rgba(138, 224, 242, 0.9);
+    // background-color: #89c3eb;
+    background-image: url(/images/profile03.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .profile-list {
+      list-style: none;
+      text-align: left;
+
+      &__text {
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        line-height: 2.1;
+        font-family: "Hiragino Sans CNS", "Noto Serif", "Hiragino Sans",
+          "游ゴシック体";
+
+        .bold {
+          font-weight: bold;
+        }
+      }
+    }
+
+    &__profile-list {
+      padding: 10px 21px 10px;
+    }
+
+    .sns-list {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+
+      &__icon {
+        font-size: 3rem;
+        color: #46c9e5;
+      }
+
+      &__title {
+        font-size: 1.4rem;
+        color: #fff;
+      }
+
+      &__link {
+        text-decoration: none;
+      }
+    }
+
+    &__sns-list {
+      padding: 0 25px 17px;
+    }
+
+    .btn--en {
+      @include btn;
+    }
+
+    &__btn {
+      // margin-top: 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 6px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      background: linear-gradient(
+        40deg,
+        rgba(67, 138, 243, 0.7),
+        rgba(255, 242, 166, 0.7)
+      );
+    }
   }
+
   .profile-detail {
     width: 550px;
     height: 470px;

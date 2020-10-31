@@ -74,9 +74,13 @@ header
 .header .nav__item {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #8ddce7;
   letter-spacing: 0.05rem;
   margin-right: 35px;
+}
+
+.header .nav__item a {
+  text-decoration: none;
+  color: #8ddce7;
 }
 
 @media screen and (max-width: 768px) {
@@ -191,9 +195,71 @@ content-about(left)
       justify-content: space-around;
 }
 
-.content-about .profile-card {
+.content-about .spin-card {
   width: 285px;
   height: 412px;
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
+}
+
+.content-about .spin-card__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1), -webkit-transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+}
+
+.content-about .spin-card .more {
+  display: none;
+}
+
+.content-about .spin-card .more:checked ~ .spin-card__content {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.content-about .spin-card__front, .content-about .spin-card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border-radius: 6px;
+}
+
+.content-about .spin-card__back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.content-about .spin-card__front {
+  -webkit-transform: translateZ(80px) scale(0.94);
+          transform: translateZ(80px) scale(0.94);
+}
+
+.content-about .spin-card__inner {
+  -webkit-transform: translateZ(80px) scale(0.94);
+          transform: translateZ(80px) scale(0.94);
+  height: 100%;
+}
+
+.content-about__spin-card {
+  margin-right: 80px;
+  margin-left: 100px;
+}
+
+.content-about .profile-card {
+  width: 100%;
+  height: 100%;
   background: #ffffff;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
@@ -254,9 +320,96 @@ content-about(left)
   margin-top: 50px;
 }
 
-.content-about__profile-card {
-  margin-right: 80px;
-  margin-left: 100px;
+.content-about .detail-profile-card {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  background-image: url(/images/profile03.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.content-about .detail-profile-card .profile-list {
+  list-style: none;
+  text-align: left;
+}
+
+.content-about .detail-profile-card .profile-list__text {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  line-height: 2.1;
+  font-family: "Hiragino Sans CNS", "Noto Serif", "Hiragino Sans", "游ゴシック体";
+}
+
+.content-about .detail-profile-card .profile-list__text .bold {
+  font-weight: bold;
+}
+
+.content-about .detail-profile-card__profile-list {
+  padding: 10px 21px 10px;
+}
+
+.content-about .detail-profile-card .sns-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+.content-about .detail-profile-card .sns-list__icon {
+  font-size: 3rem;
+  color: #46c9e5;
+}
+
+.content-about .detail-profile-card .sns-list__title {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.content-about .detail-profile-card .sns-list__link {
+  text-decoration: none;
+}
+
+.content-about .detail-profile-card__sns-list {
+  padding: 0 25px 17px;
+}
+
+.content-about .detail-profile-card .btn--en {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #8ddce7;
+  width: 220px;
+  height: 60px;
+  border-radius: 8px;
+  line-height: 60px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  font-family: "Hiragino Sans CNS", "Hiragino Sans", "游ゴシック体";
+  color: #fff;
+}
+
+.content-about .detail-profile-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 6px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: linear-gradient(40deg, rgba(67, 138, 243, 0.7), rgba(255, 242, 166, 0.7));
 }
 
 .content-about .profile-detail {

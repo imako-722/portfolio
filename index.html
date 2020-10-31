@@ -26,46 +26,113 @@
         <h1 class="header__site-title site-title">IMAKO PORTFOLIO</h1>
         <nav class="header__nav nav">
           <ul class="header__menu nav__menu menu">
-            <li class="nav__item"><a>HOME</a></li>
-            <li class="nav__item"><a>ABOUT</a></li>
-            <li class="nav__item"><a>SERVICE</a></li>
-            <li class="nav__item"><a>WORKS</a></li>
-            <li class="nav__item"><a>CONTACT</a></li>
+            <li class="nav__item"><a href="#HOME">HOME</a></li>
+            <li class="nav__item"><a href="#ABOUT">ABOUT</a></li>
+            <li class="nav__item"><a href="#SERVICES">SERVICES</a></li>
+            <li class="nav__item"><a href="#WORKS">WORKS</a></li>
+            <li class="nav__item"><a href="#CONTACT">CONTACT</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <!--ヘッダー-->
 
-    <section>
+    <section id="HOME">
       <div class="jumbotron">
         <h2 class="jumbotron__title">IMAKO<br />WEB ENGINEER</h2>
       </div>
     </section>
     <!-- jumbotron -->
 
-    <section class="content-about">
+    <section class="content-about" id="ABOUT">
       <div class="content-about__inner">
         <div class="title-container">
           <h2 class="content-about__title section-title">ABOUT</h2>
         </div>
         <div class="content-about__container">
-          <div class="profile-card content-about__profile-card">
-            <figure>
-              <img
-                class="profile-card__face"
-                src="/images/profile2.JPG"
-                alt="face"
-              />
-            </figure>
+          <div class="spin-card content-about__spin-card">
+            <input type="checkbox" id="spin" class="more" aria-hidden="true" />
+            <div class="spin-card__content">
+              <div
+                class="profile-card content-about__profile-card spin-card__front"
+              >
+                <div class="spin-card__inner">
+                  <figure>
+                    <img
+                      class="profile-card__face"
+                      src="/images/profile2.JPG"
+                      alt="face"
+                    />
+                  </figure>
+                  <h4 class="level4-heading--en profile-card__level4-heading">
+                    imako
+                  </h4>
+                  <label
+                    for="spin"
+                    class="profile-card__btn btn--en"
+                    aria-hidden="true"
+                    >SNS & Detail Profile</label
+                  >
+                </div>
+              </div>
 
-            <h4 class="level4-heading--en profile-card__level4-heading">
-              imako
-            </h4>
-            <a href="#" class="profile-card__btn btn--en"
-              >SNS & detail profile</a
-            >
+              <div
+                class="detail-profile-card content-about__profile-detail-card spin-card__back"
+              >
+                <div class="spin-card__inner">
+                  <ul class="detail-profile-card__profile-list profile-list">
+                    <li class="profile-list__item">
+                      <p class="profile-list__text">
+                        <span class="bold">Name&Age</span>: 今西 亮太（20）
+                      </p>
+                    </li>
+                    <li class="profile-list__item">
+                      <p class="profile-list__text">Birthplace: 兵庫県</p>
+                    </li>
+                    <li class="profile-list__item">
+                      <p class="profile-list__text">
+                        Education: 関西大学経済学部（在学中）
+                      </p>
+                    </li>
+                    <li class="profile-list__item">
+                      <p class="profile-list__text">
+                        Hobby: アニメ鑑賞・ギター・読書
+                      </p>
+                    </li>
+                  </ul>
+
+                  <ul class="detail-profile-card__sns-list sns-list">
+                    <li class="sns-list__item">
+                      <a href="#" class="sns-list__link">
+                        <i class="fab fa-twitter sns-list__icon"></i>
+                        <p class="sns-list__title">twitter</p>
+                      </a>
+                    </li>
+                    <li class="sns-list__item">
+                      <a href="#" class="sns-list__link">
+                        <i class="fab fa-github-square sns-list__icon"></i>
+                        <p class="sns-list__title">GitHub</p>
+                      </a>
+                    </li>
+                    <li class="sns-list__item">
+                      <a href="#" class="sns-list__link">
+                        <i class="fas fa-blog sns-list__icon"></i>
+                        <p class="sns-list__title">Blog</p>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <label
+                    for="spin"
+                    class="btn--en detail-profile-card__btn"
+                    aria-hidden="true"
+                    >BACK</label
+                  >
+                </div>
+              </div>
+            </div>
           </div>
+          <!-- spin-card -->
           <div class="profile-detail content-about__profile-detail">
             <h3 class="level3-heading profile-detail__level3-heading">
               PROFILE
@@ -104,7 +171,7 @@
     </section>
     <!-- content-about(left) -->
 
-    <section class="content-services">
+    <section class="content-services" id="SERVICES">
       <div class="content-services__inner">
         <div class="title-container">
           <h2 class="content-services__title section-title">SERVICES</h2>
@@ -148,7 +215,7 @@
     </section>
     <!-- content-services(right) -->
 
-    <section class="content-works">
+    <section class="content-works" id="WORKS">
       <div class="content-works__inner">
         <div class="title-container">
           <h2 class="content-works__title section-title">WORKS</h2>
@@ -209,7 +276,7 @@
       </div>
     </section>
 
-    <section class="content-contact clearfix">
+    <section class="content-contact clearfix" id="CONTACT">
       <div class="title-container">
         <h2 class="content-contact__title section-title">CONTACT</h2>
       </div>
