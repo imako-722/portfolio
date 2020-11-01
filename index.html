@@ -21,280 +21,369 @@
     />
   </head>
   <body>
-    <header class="header">
-      <div class="header__inner">
-        <h1 class="header__site-title site-title">IMAKO PORTFOLIO</h1>
-        <nav class="header__nav nav">
-          <ul class="header__menu nav__menu menu">
-            <li class="nav__item"><a href="#HOME">HOME</a></li>
-            <li class="nav__item"><a href="#ABOUT">ABOUT</a></li>
-            <li class="nav__item"><a href="#SERVICES">SERVICES</a></li>
-            <li class="nav__item"><a href="#WORKS">WORKS</a></li>
-            <li class="nav__item"><a href="#CONTACT">CONTACT</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!--ヘッダー-->
-
-    <section id="HOME">
-      <div class="jumbotron">
-        <h2 class="jumbotron__title">IMAKO<br />WEB ENGINEER</h2>
-      </div>
-    </section>
-    <!-- jumbotron -->
-
-    <section class="content-about" id="ABOUT">
-      <div class="content-about__inner">
-        <div class="title-container">
-          <h2 class="content-about__title section-title">ABOUT</h2>
-        </div>
-        <div class="content-about__container">
-          <div class="spin-card content-about__spin-card">
-            <input type="checkbox" id="spin" class="more" aria-hidden="true" />
-            <div class="spin-card__content">
-              <div
-                class="profile-card content-about__profile-card spin-card__front"
-              >
-                <div class="spin-card__inner">
-                  <figure>
-                    <img
-                      class="profile-card__face"
-                      src="/images/profile2.JPG"
-                      alt="face"
-                    />
-                  </figure>
-                  <h4 class="level4-heading--en profile-card__level4-heading">
-                    imako
-                  </h4>
-                  <label
-                    for="spin"
-                    class="profile-card__btn btn--en"
-                    aria-hidden="true"
-                    >SNS & Detail Profile</label
-                  >
-                </div>
-              </div>
-
-              <div
-                class="detail-profile-card content-about__profile-detail-card spin-card__back"
-              >
-                <div class="spin-card__inner">
-                  <ul class="detail-profile-card__profile-list profile-list">
-                    <li class="profile-list__item">
-                      <p class="profile-list__text">
-                        <span class="bold">Name&Age</span>: 今西 亮太（20）
-                      </p>
-                    </li>
-                    <li class="profile-list__item">
-                      <p class="profile-list__text">Birthplace: 兵庫県</p>
-                    </li>
-                    <li class="profile-list__item">
-                      <p class="profile-list__text">
-                        Education: 関西大学経済学部（在学中）
-                      </p>
-                    </li>
-                    <li class="profile-list__item">
-                      <p class="profile-list__text">
-                        Hobby: アニメ鑑賞・ギター・読書
-                      </p>
-                    </li>
-                  </ul>
-
-                  <ul class="detail-profile-card__sns-list sns-list">
-                    <li class="sns-list__item">
-                      <a href="#" class="sns-list__link">
-                        <i class="fab fa-twitter sns-list__icon"></i>
-                        <p class="sns-list__title">twitter</p>
-                      </a>
-                    </li>
-                    <li class="sns-list__item">
-                      <a href="#" class="sns-list__link">
-                        <i class="fab fa-github-square sns-list__icon"></i>
-                        <p class="sns-list__title">GitHub</p>
-                      </a>
-                    </li>
-                    <li class="sns-list__item">
-                      <a href="#" class="sns-list__link">
-                        <i class="fas fa-blog sns-list__icon"></i>
-                        <p class="sns-list__title">Blog</p>
-                      </a>
-                    </li>
-                  </ul>
-
-                  <label
-                    for="spin"
-                    class="btn--en detail-profile-card__btn"
-                    aria-hidden="true"
-                    >BACK</label
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- spin-card -->
-          <div class="profile-detail content-about__profile-detail">
-            <h3 class="level3-heading profile-detail__level3-heading">
-              PROFILE
-            </h3>
-            <p class="profile-detail__text">
-              初めまして、いまこ（今西亮太）と申します。<br />当サイトにご訪問いただき、ありがとうございます。<br />大学に通いながら、Web制作をしております。<br />お客様のご要望をお伺いし、潜在的な問題点を発見しながら、お客様それぞれにあったご提案をさせていただきます。また、お客様と迅速かつ丁寧なコミュニケーションをとることで、お客様に信頼していただき、安心してWeb制作を任せてもらえるように心がけております。
-            </p>
-            <h3 class="level3-heading profile-detail__level3-heading mt-50">
-              SKILLS
-            </h3>
-            <ul class="skills profile-detaila__skills contet-left__skills">
-              <li class="skills__item">
-                <i class="fab fa-html5"></i>
-                <p class="skills__title">html</p>
+    <div class="body-wrapper">
+      <header class="header">
+        <div class="header__inner">
+          <h1 class="header__site-title site-title">
+            <a href="#">IMAKO PORTFOLIO</a>
+          </h1>
+          <nav class="header__nav nav">
+            <ul class="header__menu nav__menu menu">
+              <li class="nav__item">
+                <a
+                  href="#HOME"
+                  class="nav__link nav__link--jump"
+                  id="nav__link--home"
+                  >HOME</a
+                >
               </li>
-              <li class="skills__item">
-                <i class="fab fa-css3-alt"></i>
-                <p class="skills__title">css</p>
+              <li class="nav__item">
+                <a
+                  href="#ABOUT"
+                  class="nav__link nav__link--jump"
+                  id="nav__link--about"
+                  >ABOUT</a
+                >
               </li>
-              <li class="skills__item">
-                <i class="fab fa-sass"></i>
-                <p class="skills__title">sass</p>
+              <li class="nav__item">
+                <a
+                  href="#SERVICES"
+                  class="nav__link nav__link--jump"
+                  id="nav__link--services"
+                  >SERVICES</a
+                >
               </li>
-              <li class="skills__item">
-                <img src="/images/jquery.png" alt="jQuery" />
-                <p class="skills__title">jQuery</p>
+              <li class="nav__item">
+                <a
+                  href="#WORKS"
+                  class="nav__link nav__link--jump"
+                  id="nav__link--works"
+                  >WORKS</a
+                >
               </li>
-              <li class="skills__item">
-                <i class="fab fa-github"></i>
-                <p class="skills__title">GitHub</p>
+              <li class="nav__item">
+                <a
+                  href="#CONTACT"
+                  class="nav__link nav__link--jump"
+                  id="nav__link--contact"
+                  >CONTACT</a
+                >
               </li>
             </ul>
+          </nav>
+        </div>
+      </header>
+      <!--header-->
+
+      <section id="HOME" class="position-now">
+        <div class="jumbotron">
+          <h2 class="jumbotron__title">IMAKO<br />WEB ENGINEER</h2>
+        </div>
+      </section>
+      <!-- jumbotron -->
+
+      <section class="content-about position-now" id="ABOUT">
+        <div class="content-about__inner">
+          <div class="title-container">
+            <h2 class="content-about__title section-title">ABOUT</h2>
+          </div>
+          <div class="content-about__container">
+            <div class="spin-card content-about__spin-card">
+              <input
+                type="checkbox"
+                id="spin"
+                class="more"
+                aria-hidden="true"
+              />
+              <div class="spin-card__content">
+                <div
+                  class="profile-card content-about__profile-card spin-card__front"
+                >
+                  <div class="spin-card__inner">
+                    <figure>
+                      <img
+                        class="profile-card__face"
+                        src="/images/profile2.JPG"
+                        alt="face"
+                      />
+                    </figure>
+                    <h4 class="level4-heading--en profile-card__level4-heading">
+                      imako
+                    </h4>
+                    <label
+                      for="spin"
+                      class="profile-card__btn btn--en"
+                      aria-hidden="true"
+                      >SNS & Detail Profile</label
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="detail-profile-card content-about__profile-detail-card spin-card__back"
+                >
+                  <div class="spin-card__inner">
+                    <ul class="detail-profile-card__profile-list profile-list">
+                      <li class="profile-list__item">
+                        <p class="profile-list__text">
+                          <span class="bold">Name&Age</span>: 今西 亮太（20）
+                        </p>
+                      </li>
+                      <li class="profile-list__item">
+                        <p class="profile-list__text">Birthplace: 兵庫県</p>
+                      </li>
+                      <li class="profile-list__item">
+                        <p class="profile-list__text">
+                          Education: 関西大学経済学部（在学中）
+                        </p>
+                      </li>
+                      <li class="profile-list__item">
+                        <p class="profile-list__text">
+                          Hobby: アニメ鑑賞・ギター・読書
+                        </p>
+                      </li>
+                    </ul>
+
+                    <ul class="detail-profile-card__sns-list sns-list">
+                      <li class="sns-list__item">
+                        <a href="#" class="sns-list__link">
+                          <i class="fab fa-twitter sns-list__icon"></i>
+                          <p class="sns-list__title">twitter</p>
+                        </a>
+                      </li>
+                      <li class="sns-list__item">
+                        <a href="#" class="sns-list__link">
+                          <i class="fab fa-github-square sns-list__icon"></i>
+                          <p class="sns-list__title">GitHub</p>
+                        </a>
+                      </li>
+                      <li class="sns-list__item">
+                        <a href="#" class="sns-list__link">
+                          <i class="fas fa-blog sns-list__icon"></i>
+                          <p class="sns-list__title">Blog</p>
+                        </a>
+                      </li>
+                    </ul>
+
+                    <label
+                      for="spin"
+                      class="btn--en detail-profile-card__btn"
+                      aria-hidden="true"
+                      >BACK</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- spin-card -->
+            <div class="profile-detail content-about__profile-detail">
+              <h3 class="level3-heading profile-detail__level3-heading">
+                PROFILE
+              </h3>
+              <p class="profile-detail__text">
+                初めまして、いまこ（今西亮太）と申します。<br />当サイトにご訪問いただき、ありがとうございます。<br />大学に通いながら、Web制作をしております。<br />お客様のご要望をお伺いし、潜在的な問題点を発見しながら、お客様それぞれにあったご提案をさせていただきます。また、お客様と迅速かつ丁寧なコミュニケーションをとることで、お客様に信頼していただき、安心してWeb制作を任せてもらえるように心がけております。
+              </p>
+              <h3 class="level3-heading profile-detail__level3-heading mt-50">
+                SKILLS
+              </h3>
+              <ul class="skills profile-detaila__skills contet-left__skills">
+                <li class="skills__item">
+                  <i class="fab fa-html5"></i>
+                  <p class="skills__title">html</p>
+                </li>
+                <li class="skills__item">
+                  <i class="fab fa-css3-alt"></i>
+                  <p class="skills__title">css</p>
+                </li>
+                <li class="skills__item">
+                  <i class="fab fa-sass"></i>
+                  <p class="skills__title">sass</p>
+                </li>
+                <li class="skills__item">
+                  <img src="/images/jquery.png" alt="jQuery" />
+                  <p class="skills__title">jQuery</p>
+                </li>
+                <li class="skills__item">
+                  <i class="fab fa-github"></i>
+                  <p class="skills__title">GitHub</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- content-about(left) -->
+      </section>
+      <!-- content-about(left) -->
 
-    <section class="content-services" id="SERVICES">
-      <div class="content-services__inner">
-        <div class="title-container">
-          <h2 class="content-services__title section-title">SERVICES</h2>
-        </div>
-        <ul class="content-services__service-list service-list">
-          <li class="service-list__item service-list-item">
-            <div class="service-list__container">
-              <i class="fas fa-code service-list__icon"></i>
-              <h3 class="level3-heading--ja service-list__level3-heading">
-                コーディング代行
-              </h3>
-              <p class="service-list__text">
-                Webサイトのデザインデータをお預かりし、お客様のご要望通りにコーディングをさせていただきます。また、SEO内部対策として適切なマークアップもさせていただきます。
-              </p>
-            </div>
-          </li>
-          <li class="service-list__item">
-            <div class="service-list__container">
-              <i class="fas fa-mobile-alt service-list__icon"></i>
-              <h3 class="level3-heading--ja service-list__level3-heading">
-                スマホ対応
-              </h3>
-              <p class="service-list__text">
-                現在、Webサイトの閲覧はスマートフォンで行われることが一般的です。もはや、スマートフォン端末への対応は必須と言えるでしょう。どの端末で見てもデザインが崩れないようなレスポンシブなWebページを作成させていただきます。
-              </p>
-            </div>
-          </li>
-          <li class="service-list__item">
-            <div class="service-list__container">
-              <i class="fas fa-tools service-list__icon"></i>
-              <h3 class="level3-heading--ja service-list__level3-heading">
-                メンテナンス
-              </h3>
-              <p class="service-list__text">
-                効果が期待できるWebサイトを維持するためには、更新やメンテナンスが非常に大切になります。写真の差し替え、デザインの変更など、お客様のご要望に対応させていただきます。
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!-- content-services(right) -->
-
-    <section class="content-works" id="WORKS">
-      <div class="content-works__inner">
-        <div class="title-container">
-          <h2 class="content-works__title section-title">WORKS</h2>
-        </div>
-        <ul class="content-works__card-list card-list">
-          <li class="card-list__card">
-            <div class="card-list__inner">
-              <div class="card-list__image-container">
-                <img
-                  class="card-list__image"
-                  src="/images/card-img01.jpg"
-                  alt="face"
-                />
-              </div>
-
-              <h4 class="level4-heading--ja card-list__level4-heading">
-                シンプルなホームページ
-              </h4>
-              <p class="card-list__text">「模写」</p>
-              <a href="#" class="card-list__btn btn">表示</a>
-            </div>
-          </li>
-          <li class="card-list__card">
-            <div class="card-list__inner">
-              <div class="card-list__image-container">
-                <img
-                  class="card-list__image"
-                  src="/images/card-img02.jpg"
-                  alt="face"
-                />
-              </div>
-
-              <h4 class="level4-heading--ja card-list__level4-heading">
-                コーポレートサイト
-              </h4>
-              <p class="card-list__text">「模写」</p>
-              <a href="#" class="card-list__btn btn">表示</a>
-            </div>
-          </li>
-          <li class="card-list__card">
-            <div class="card-list__inner">
-              <div class="card-list__image-container">
-                <img
-                  class="card-list__image"
-                  src="/images/card-img03.jpg"
-                  alt="face"
-                />
-              </div>
-
-              <h4 class="level4-heading--ja card-list__level4-heading">
-                Airbnb様
-              </h4>
-              <p class="card-list__text">「模写」</p>
-              <a href="#" class="card-list__btn btn">表示</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="content-contact clearfix" id="CONTACT">
-      <div class="title-container">
-        <h2 class="content-contact__title section-title">CONTACT</h2>
-      </div>
-      <div class="content-contact__inner">
-        <form action="" class="content-contact__form form">
-          <div class="form__inner">
-            <div class="form__input-container">
-              <input type="text" name="your-name" class="form__name" />
-              <input type="text" name="your-email" class="form__email" />
-            </div>
-            <textarea name="your-message" class="form__text"></textarea>
+      <section class="content-services position-now" id="SERVICES">
+        <div class="content-services__inner">
+          <div class="title-container">
+            <h2 class="content-services__title section-title">SERVICES</h2>
           </div>
-          <input type="button" class="btn form__btn" />
-        </form>
-      </div>
-    </section>
+          <ul class="content-services__service-list service-list">
+            <li class="service-list__item service-list-item">
+              <div class="service-list__container">
+                <i class="fas fa-code service-list__icon"></i>
+                <h3 class="level3-heading--ja service-list__level3-heading">
+                  コーディング代行
+                </h3>
+                <p class="service-list__text">
+                  Webサイトのデザインデータをお預かりし、お客様のご要望通りにコーディングをさせていただきます。また、SEO内部対策として適切なマークアップもさせていただきます。
+                </p>
+              </div>
+            </li>
+            <li class="service-list__item">
+              <div class="service-list__container">
+                <i class="fas fa-mobile-alt service-list__icon"></i>
+                <h3 class="level3-heading--ja service-list__level3-heading">
+                  スマホ対応
+                </h3>
+                <p class="service-list__text">
+                  現在、Webサイトの閲覧はスマートフォンで行われることが一般的です。もはや、スマートフォン端末への対応は必須と言えるでしょう。どの端末で見てもデザインが崩れないようなレスポンシブなWebページを作成させていただきます。
+                </p>
+              </div>
+            </li>
+            <li class="service-list__item">
+              <div class="service-list__container">
+                <i class="fas fa-tools service-list__icon"></i>
+                <h3 class="level3-heading--ja service-list__level3-heading">
+                  メンテナンス
+                </h3>
+                <p class="service-list__text">
+                  効果が期待できるWebサイトを維持するためには、更新やメンテナンスが非常に大切になります。写真の差し替え、デザインの変更など、お客様のご要望に対応させていただきます。
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- content-services(right) -->
 
-    <footer></footer>
+      <section class="content-works position-now" id="WORKS">
+        <div class="content-works__inner">
+          <div class="title-container">
+            <h2 class="content-works__title section-title">WORKS</h2>
+          </div>
+          <ul
+            class="content-works__card-list card-list effect-fade effect-scroll"
+          >
+            <li class="card-list__card-container">
+              <div class="card-list__card">
+                <div class="card-list__inner">
+                  <div class="card-list__image-container">
+                    <img
+                      class="card-list__image"
+                      src="/images/card-img01.jpg"
+                      alt="face"
+                    />
+                  </div>
+
+                  <h4 class="level4-heading--ja card-list__level4-heading">
+                    シンプルなホームページ
+                  </h4>
+                  <p class="card-list__text">「模写」</p>
+                  <a
+                    href="#"
+                    class="card-list__btn btn card-list__btn--open"
+                    data-target="modal01"
+                    >View</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="card-list__card-container">
+              <div class="card-list__card">
+                <div class="card-list__inner">
+                  <div class="card-list__image-container">
+                    <img
+                      class="card-list__image"
+                      src="/images/card-img02.jpg"
+                      alt="face"
+                    />
+                  </div>
+
+                  <h4 class="level4-heading--ja card-list__level4-heading">
+                    コーポレートサイト
+                  </h4>
+                  <p class="card-list__text">「模写」</p>
+                  <a
+                    href="#"
+                    class="card-list__btn btn card-list__btn--open"
+                    data-target="modal02"
+                    >View</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="card-list__card-container">
+              <div class="card-list__card">
+                <div class="card-list__inner">
+                  <div class="card-list__image-container">
+                    <img
+                      class="card-list__image"
+                      src="/images/card-img03.jpg"
+                      alt="face"
+                    />
+                  </div>
+
+                  <h4 class="level4-heading--ja card-list__level4-heading">
+                    Airbnb様
+                  </h4>
+                  <p class="card-list__text">「模写」</p>
+                  <a
+                    href="#"
+                    class="card-list__btn btn card-list__btn--open"
+                    data-target="modal03"
+                    >View</a
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- クリックで表示 -->
+        <div class="modal" id="modal01">
+          <div class="modal__background modal__btn--close"></div>
+          <div class="modal__content">
+            <img src="/images/card-img01.jpg" alt="" class="modal__image" />
+            <a class="modal__btn--close modal__btn btn">Close</a>
+          </div>
+        </div>
+        <div class="modal" id="modal02">
+          <div class="modal__background modal__btn--close"></div>
+          <div class="modal__content">
+            <img src="/images/card-img02.jpg" alt="" class="modal__image" />
+            <a class="modal__btn--close modal__btn btn">Close</a>
+          </div>
+        </div>
+        <div class="modal" id="modal03">
+          <div class="modal__background modal__btn--close"></div>
+          <div class="modal__content">
+            <img src="/images/card-img03.jpg" alt="" class="modal__image" />
+            <a class="modal__btn--close modal__btn btn">Close</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-contact position-now clearfix" id="CONTACT">
+        <div class="title-container">
+          <h2 class="content-contact__title section-title">CONTACT</h2>
+        </div>
+        <div class="content-contact__inner">
+          <form action="" class="content-contact__form form">
+            <div class="form__inner">
+              <div class="form__input-container">
+                <input type="text" name="your-name" class="form__name" />
+                <input type="text" name="your-email" class="form__email" />
+              </div>
+              <textarea name="your-message" class="form__text"></textarea>
+            </div>
+            <input type="button" class="btn form__btn" />
+          </form>
+        </div>
+      </section>
+
+      <footer></footer>
+    </div>
     <!--フッター-->
     <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>

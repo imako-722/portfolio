@@ -20,6 +20,7 @@ body {
   color: #333333;
   overflow-wrap: break-word;
   overflow-x: hidden;
+  // overflow: hidden;
 }
 
 p {
@@ -29,13 +30,25 @@ p {
   letter-spacing: 0.05rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 .clearfix {
   @include clearfix;
 }
 /*------------------------
 main
 -------------------------*/
+.body-wrapper {
+  // min-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
 
+  @media screen and (max-width: 1024px) {
+    min-width: auto;
+  }
+}
 /*-----------------
 header
 -------------------*/
@@ -43,11 +56,13 @@ header
   width: 100%;
   height: 80px;
   background-color: #fff;
+  position: fixed;
+  z-index: 10;
 
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding: 28px 75px 28px 75px;
+    padding: 28px 50px;
   }
 
   .site-title {
@@ -55,8 +70,15 @@ header
     font-weight: bold;
     color: #8ddce7;
     letter-spacing: 0.05rem;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 1.7rem;
+    }
   }
   &__site-title {
+    a {
+      color: #46c9e5;
+    }
   }
 
   .nav {
@@ -74,13 +96,24 @@ header
       letter-spacing: 0.05rem;
       margin-right: 35px;
 
-      a {
-        text-decoration: none;
-        color: #8ddce7;
+      @media screen and (max-width: 1024px) {
+        font-size: 1.7rem;
       }
     }
     @media screen and (max-width: 768px) {
       display: none;
+    }
+
+    &__link {
+      color: #a7ada7;
+
+      &:hover {
+        color: #8ddce7;
+      }
+
+      &--active {
+        color: #46c9e5;
+      }
     }
   }
 }
@@ -105,8 +138,14 @@ jumbotron
     text-shadow: 6px 6px 1px rgba(0, 0, 0, 0.3);
     text-align: center;
     position: absolute;
-    top: 32%;
+    top: 40%;
     left: 41%;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 7.4rem;
+      top: 45%;
+      left: 30%;
+    }
     // text-shadow: 5px 5px 2px blue;
   }
 }
@@ -125,6 +164,10 @@ content-about(left)
 
     .section-title {
       @include section-title(36%, 36%);
+
+      @media screen and (max-width: 1024px) {
+        @include section-title(32.5%, 32.5%);
+      }
     }
   }
 
@@ -184,6 +227,9 @@ content-about(left)
   &__spin-card {
     margin-right: 80px;
     margin-left: 100px;
+    @media screen and (max-width: 1024px) {
+      margin: 0 55px 0 80px;
+    }
   }
 
   .profile-card {
@@ -259,6 +305,10 @@ content-about(left)
         font-family: "Hiragino Sans CNS", "Noto Serif", "Hiragino Sans",
           "游ゴシック体";
 
+        @media screen and (max-width: 1024px) {
+          font-size: 1.4rem;
+        }
+
         .bold {
           font-weight: bold;
         }
@@ -267,6 +317,10 @@ content-about(left)
 
     &__profile-list {
       padding: 10px 21px 10px;
+
+      @media screen and (max-width: 1024px) {
+        padding: 25px 20px 20px;
+      }
     }
 
     .sns-list {
@@ -292,14 +346,23 @@ content-about(left)
 
     &__sns-list {
       padding: 0 25px 17px;
+
+      @media screen and (max-width: 1024px) {
+        padding: 0 25px 25px;
+      }
     }
 
     .btn--en {
       @include btn;
+      @media screen and (max-width: 1024px) {
+        // width: 100px;
+      }
     }
 
     &__btn {
-      // margin-top: 10px;
+      // @media screen and (max-width: 1024px) {
+      //   width: 100px;
+      // }
     }
 
     &::after {
@@ -352,6 +415,10 @@ content-about(left)
       // margin-right: 20px;
       .fab {
         font-size: 8rem;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 7rem;
+        }
       }
 
       img {
@@ -384,6 +451,10 @@ content-services(right)
 
   .section-title {
     @include section-title(34%, 34%);
+
+    @media screen and (max-width: 1024px) {
+      @include section-title(28.5%, 28.5%);
+    }
   }
 
   &__service-list {
@@ -393,12 +464,16 @@ content-services(right)
   .service-list {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
 
     &__container {
-      width: 320px;
+      max-width: 320px;
       padding: 20px;
+
+      // @media screen and (max-width: 1024px) {
+      //   padding: 20px 10px 20px;
+      // }
     }
 
     .level3-heading--ja {
@@ -440,6 +515,10 @@ content-works(left)
 
   .section-title {
     @include section-title(36%, 36%);
+
+    @media screen and (max-width: 1024px) {
+      @include section-title(31.5%, 31.5%);
+    }
   }
 
   &__card-list {
@@ -450,8 +529,16 @@ content-works(left)
     list-style: none;
     display: flex;
     justify-content: space-between;
+
+    &__card-container {
+      width: 330px;
+      padding: 0 10px 0;
+    }
     &__card {
       @include card(320px, 460px);
+      @media screen and (max-width: 1024px) {
+        // @include card();
+      }
     }
     &__image-container {
       width: 100%;
@@ -486,6 +573,52 @@ content-works(left)
 
     &__btn {
       margin-top: 30px;
+    }
+  }
+
+  .modal {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow-y: scroll;
+    z-index: 600;
+    overflow: hidden;
+    outline: 0;
+    transform: translateZ(0);
+
+    &__background {
+      background: rgba(0, 0, 0, 0.8);
+      height: 100vh;
+      position: fixed;
+      width: 100%;
+      z-index: 700;
+    }
+
+    &__content {
+      background: #fff;
+      left: 50%;
+      padding: 40px 40px 100px;
+      position: absolute;
+      top: 8%;
+      transform: translate(-50%);
+      width: 60%;
+      z-index: 800;
+      overflow-y: scroll;
+      height: 100vh;
+      text-align: center;
+    }
+
+    &__image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      @include btn;
     }
   }
 }

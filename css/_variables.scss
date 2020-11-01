@@ -12,11 +12,16 @@ $content-right-margin: 190px 0 0 auto;
 $content-left-margin: 190px 0 0 0;
 
 @mixin content($margin, $direction, $content-name) {
-  width: calc(1920px - (360px + (1920px - 100vw) / 2));
+  max-width: calc(1920px - (360px + (1920px - 100vw) / 2));
   background-color: #fff;
   margin: $margin;
   box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.16);
   position: relative;
+
+  @media screen and (max-width: 1024px) {
+    //  max-width: calc(1785px - (360px + (1920px - 100vw) / 2));
+    width: calc(100vw - 20 / 768 * 100vw);
+  }
 
   &::before {
     content: "";
@@ -27,6 +32,12 @@ $content-left-margin: 190px 0 0 0;
     #{$direction}: -60px;
     background: rgba(138, 224, 242, 0.6);
     z-index: -2;
+
+    @media screen and (max-width: 1024px) {
+      //  width: 63.54167vw;
+      // bottom: -10.41667vw;
+      #{$direction}: -2.60417vw;
+    }
   }
 
   &::after {
@@ -40,6 +51,10 @@ $content-left-margin: 190px 0 0 0;
     position: absolute;
     bottom: -65px;
     #{$direction}: 10px;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 14rem;
+    }
   }
 }
 
@@ -50,6 +65,9 @@ $right-inner-margin: 0 auto 0 0;
   max-width: 1200px;
   margin: $margin;
   padding: 0 80px $padding-bottom;
+  @media screen and (max-width: 1024px) {
+    padding: 0 30px 160px;
+  }
 }
 
 // title,heading
@@ -116,7 +134,6 @@ $right-inner-margin: 0 auto 0 0;
 
 // button
 @mixin btn {
-  text-decoration: none;
   display: inline-block;
   background-color: #8ddce7;
   width: 220px;
@@ -128,11 +145,20 @@ $right-inner-margin: 0 auto 0 0;
   letter-spacing: 0.1rem;
   font-family: "Hiragino Sans CNS", "Hiragino Sans", "游ゴシック体";
   color: #fff;
+  cursor: pointer;
+
+  @media screen and (max-width: 1024px) {
+    width: 180px;
+  }
+
+  &:hover {
+    background-color: #46c9e5;
+  }
 }
 
 // card
 @mixin card($width, $height) {
-  width: $width;
+  max-width: $width;
   height: $height;
   background: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
