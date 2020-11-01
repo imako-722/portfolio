@@ -1,3 +1,10 @@
+// 1culum
+@mixin one-culum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 // clearfix
 @mixin clearfix {
   &::after {
@@ -55,6 +62,16 @@ $content-left-margin: 190px 0 0 0;
     @media screen and (max-width: 1024px) {
       font-size: 14rem;
     }
+
+    @media screen and (max-width: 568px) {
+      font-size: 10rem;
+      bottom: -45px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 8rem;
+      bottom: -35px;
+    }
   }
 }
 
@@ -68,11 +85,23 @@ $right-inner-margin: 0 auto 0 0;
   @media screen and (max-width: 1024px) {
     padding: 0 30px 160px;
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 30px 130px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0 30px 80px;
+  }
 }
 
 // title,heading
 @mixin title-container {
   padding-top: 75px;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 50px;
+  }
 }
 
 @mixin section-title($left, $right) {
@@ -81,6 +110,10 @@ $right-inner-margin: 0 auto 0 0;
   letter-spacing: 0.3rem;
   position: relative;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.7rem;
+  }
 
   &::before,
   &::after {

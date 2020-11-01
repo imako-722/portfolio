@@ -158,15 +158,40 @@ content-about(left)
 
   &__inner {
     @include content-inner($left-inner-margin, 160px);
+
+    &--left {
+      @media screen and (max-width: 768px) {
+        padding: 0 30px 130px 35px;
+      }
+      @media screen and (max-width: 480px) {
+        padding: 0 30px 80px 35px;
+      }
+    }
   }
   .title-container {
-    padding-top: 75px;
+    @include title-container;
 
     .section-title {
       @include section-title(36%, 36%);
 
       @media screen and (max-width: 1024px) {
         @include section-title(32.5%, 32.5%);
+      }
+
+      @media screen and (max-width: 768px) {
+        @include section-title(27%, 27%);
+      }
+
+      @media screen and (max-width: 568px) {
+        @include section-title(20%, 20%);
+      }
+
+      @media screen and (max-width: 480px) {
+        @include section-title(6%, 6%);
+      }
+
+      &--left {
+        // width: 105%;
       }
     }
   }
@@ -175,6 +200,11 @@ content-about(left)
     margin-top: 65px;
     display: flex;
     justify-content: space-around;
+
+    @media screen and (max-width: 1024px) {
+      @include one-culum;
+      margin-top: 40px;
+    }
   }
 
   .spin-card {
@@ -227,9 +257,9 @@ content-about(left)
   &__spin-card {
     margin-right: 80px;
     margin-left: 100px;
-    @media screen and (max-width: 1024px) {
-      margin: 0 55px 0 80px;
-    }
+    // @media screen and (max-width: 1024px) {
+    //   margin: 0 55px 0 80px;
+    // }
   }
 
   .profile-card {
@@ -305,9 +335,9 @@ content-about(left)
         font-family: "Hiragino Sans CNS", "Noto Serif", "Hiragino Sans",
           "游ゴシック体";
 
-        @media screen and (max-width: 1024px) {
-          font-size: 1.4rem;
-        }
+        // @media screen and (max-width: 1024px) {
+        //   font-size: 1.4rem;
+        // }
 
         .bold {
           font-weight: bold;
@@ -318,9 +348,9 @@ content-about(left)
     &__profile-list {
       padding: 10px 21px 10px;
 
-      @media screen and (max-width: 1024px) {
-        padding: 25px 20px 20px;
-      }
+      // @media screen and (max-width: 1024px) {
+      //   padding: 25px 20px 20px;
+      // }
     }
 
     .sns-list {
@@ -347,9 +377,9 @@ content-about(left)
     &__sns-list {
       padding: 0 25px 17px;
 
-      @media screen and (max-width: 1024px) {
-        padding: 0 25px 25px;
-      }
+      // @media screen and (max-width: 1024px) {
+      //   padding: 0 25px 25px;
+      // }
     }
 
     .btn--en {
@@ -385,8 +415,8 @@ content-about(left)
   }
 
   .profile-detail {
-    width: 550px;
-    height: 470px;
+    max-width: 550px;
+    // height: 470px;
     text-align: center;
 
     .level3-heading {
@@ -406,6 +436,12 @@ content-about(left)
     }
   }
 
+  &__profile-detail {
+    @media screen and (max-width: 1024px) {
+      margin-top: 50px;
+    }
+  }
+
   .skills {
     list-style: none;
     display: flex;
@@ -415,15 +451,25 @@ content-about(left)
       // margin-right: 20px;
       .fab {
         font-size: 8rem;
+        display: block;
 
-        @media screen and (max-width: 1024px) {
-          font-size: 7rem;
+        // @media screen and (max-width: 1024px) {
+        //   font-size: 7rem;
+        // }
+
+        @media screen and (max-width: 480px) {
+          font-size: 5rem;
         }
       }
 
       img {
         width: 80px;
         height: 80px;
+
+        @media screen and (max-width: 480px) {
+          width: 50px;
+          height: 50px;
+        }
       }
     }
 
@@ -431,6 +477,10 @@ content-about(left)
       font-family: "Merriweather", "Noto Serif", "Helvetica", "Arial",
         sans-serif;
       margin-top: 10px;
+
+      @media screen and (max-width: 480px) {
+        font-size: 1.4rem;
+      }
     }
   }
 }
@@ -455,6 +505,15 @@ content-services(right)
     @media screen and (max-width: 1024px) {
       @include section-title(28.5%, 28.5%);
     }
+    @media screen and (max-width: 768px) {
+      @include section-title(22.5%, 22.5%);
+    }
+    @media screen and (max-width: 568px) {
+      @include section-title(15%, 15%);
+    }
+    @media screen and (max-width: 480px) {
+      @include section-title(0%, 0%);
+    }
   }
 
   &__service-list {
@@ -466,10 +525,17 @@ content-services(right)
     display: flex;
     justify-content: space-around;
     text-align: center;
+    @media screen and (max-width: 768px) {
+      @include one-culum;
+    }
 
     &__container {
       max-width: 320px;
       padding: 20px;
+
+      @media screen and (max-width: 768px) {
+        max-width: 500px;
+      }
 
       // @media screen and (max-width: 1024px) {
       //   padding: 20px 10px 20px;
@@ -496,6 +562,12 @@ content-services(right)
       margin-top: 35px;
       text-align: left;
     }
+
+    &__item + .service-list__item {
+      @media screen and (max-width: 768px) {
+        margin-top: 50px;
+      }
+    }
   }
 }
 
@@ -519,10 +591,28 @@ content-works(left)
     @media screen and (max-width: 1024px) {
       @include section-title(31.5%, 31.5%);
     }
+    @media screen and (max-width: 768px) {
+      @include section-title(25%, 25%);
+    }
+
+    @media screen and (max-width: 568px) {
+      @include section-title(20%, 20%);
+    }
+    @media screen and (max-width: 480px) {
+      @include section-title(6%, 6%);
+    }
+
+    &--left {
+      // width: 105%;
+    }
   }
 
   &__card-list {
     margin-top: 75px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 45px;
+    }
   }
 
   .card-list {
@@ -530,9 +620,21 @@ content-works(left)
     display: flex;
     justify-content: space-between;
 
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     &__card-container {
       width: 330px;
       padding: 0 10px 0;
+
+      @media screen and (max-width: 768px) {
+        + .card-list__card-container {
+          margin-top: 60px;
+        }
+      }
     }
     &__card {
       @include card(320px, 460px);
