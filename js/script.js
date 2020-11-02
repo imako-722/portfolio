@@ -102,3 +102,10 @@ $(function () {
         });
         jQuery(window).scroll();
     });
+
+
+    // ハンバーガーメニュー
+  $(".humberger-icon").click(function () {
+    $(this).toggleClass("humberger-icon--active");
+    $(".humberger-menu").toggleClass("humberger-menu--active");
+  });
