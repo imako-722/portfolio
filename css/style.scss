@@ -250,9 +250,21 @@ jumbotron
     left: 41%;
 
     @media screen and (max-width: 1024px) {
-      font-size: 7.4rem;
+      font-size: 8.4rem;
       top: 45%;
-      left: 30%;
+      left: 25%;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 7.4rem;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 5rem;
     }
     // text-shadow: 5px 5px 2px blue;
   }
@@ -267,40 +279,62 @@ content-about(left)
   &__inner {
     @include content-inner($left-inner-margin, 160px);
 
-    &--left {
-      @media screen and (max-width: 768px) {
-        padding: 0 30px 130px 35px;
-      }
-      @media screen and (max-width: 480px) {
-        padding: 0 30px 80px 35px;
-      }
-    }
+    // &--left {
+    //   @media screen and (max-width: 768px) {
+    //     padding: 0 30px 130px 80px;
+    //   }
+    //   @media screen and (max-width: 480px) {
+    //     padding: 0 10px 80px;
+    //   }
+    // }
   }
   .title-container {
     @include title-container;
 
     .section-title {
-      @include section-title(36%, 36%);
+      @include section-title;
+      // font-size: 3rem;
+      // font-weight: normal;
+      // letter-spacing: 0.3rem;
+      // position: relative;
+      // text-align: center;
 
-      @media screen and (max-width: 1024px) {
-        @include section-title(32.5%, 32.5%);
-      }
+      // &::before {
+      //   content: "";
+      //   width: 100%;
+      //   height: 4px;
+      //   background-color: #46c9e5;
+      //   position: absolute;
+      //   top: calc(50% - 1px);
+      //   left: 0;
+      // }
 
-      @media screen and (max-width: 768px) {
-        @include section-title(27%, 27%);
-      }
+      // span {
+      //   position: relative;
+      //   padding: 0 1em;
+      //   background: #fff;
+      // }
+      // @include section-title(36%, 36%);
 
-      @media screen and (max-width: 568px) {
-        @include section-title(20%, 20%);
-      }
+      // @media screen and (max-width: 1024px) {
+      //   @include section-title(32.5%, 32.5%);
+      // }
 
-      @media screen and (max-width: 480px) {
-        @include section-title(6%, 6%);
-      }
+      // @media screen and (max-width: 768px) {
+      //   @include section-title(27%, 27%);
+      // }
 
-      &--left {
-        // width: 105%;
-      }
+      // @media screen and (max-width: 568px) {
+      //   @include section-title(20%, 20%);
+      // }
+
+      // @media screen and (max-width: 480px) {
+      //   @include section-title(6%, 6%);
+      // }
+
+      // &--left {
+      //   // width: 105%;
+      // }
     }
   }
 
@@ -311,7 +345,7 @@ content-about(left)
 
     @media screen and (max-width: 1024px) {
       @include one-culum;
-      margin-top: 40px;
+      margin-top: 60px;
     }
   }
 
@@ -319,6 +353,11 @@ content-about(left)
     width: 285px;
     height: 412px;
     perspective: 1500px;
+
+    @media screen and (max-width: 480px) {
+      width: 250px;
+      height: 400px;
+    }
 
     &__content {
       position: relative;
@@ -365,9 +404,9 @@ content-about(left)
   &__spin-card {
     margin-right: 80px;
     margin-left: 100px;
-    // @media screen and (max-width: 1024px) {
-    //   margin: 0 55px 0 80px;
-    // }
+    @media screen and (max-width: 480px) {
+      margin-left: 80px;
+    }
   }
 
   .profile-card {
@@ -412,9 +451,15 @@ content-about(left)
       margin-top: 25px;
     }
 
-    .btn--en {
+    .btn {
       @include btn;
       // font-family: "Merriweather", "Helvetica", "Arial", sans-serif;
+    }
+
+    .btn--sp {
+      @media screen and (max-width: 320px) {
+        font-size: 1.5rem;
+      }
     }
 
     &__btn {
@@ -568,6 +613,9 @@ content-about(left)
         @media screen and (max-width: 480px) {
           font-size: 5rem;
         }
+        @media screen and (max-width: 320px) {
+          font-size: 4rem;
+        }
       }
 
       img {
@@ -577,6 +625,10 @@ content-about(left)
         @media screen and (max-width: 480px) {
           width: 50px;
           height: 50px;
+        }
+        @media screen and (max-width: 320px) {
+          width: 40px;
+          height: 40px;
         }
       }
     }
@@ -608,24 +660,27 @@ content-services(right)
   }
 
   .section-title {
-    @include section-title(34%, 34%);
+    @include section-title;
 
-    @media screen and (max-width: 1024px) {
-      @include section-title(28.5%, 28.5%);
-    }
-    @media screen and (max-width: 768px) {
-      @include section-title(22.5%, 22.5%);
-    }
-    @media screen and (max-width: 568px) {
-      @include section-title(15%, 15%);
-    }
-    @media screen and (max-width: 480px) {
-      @include section-title(0%, 0%);
-    }
+    // @media screen and (max-width: 1024px) {
+    //   @include section-title(28.5%, 28.5%);
+    // }
+    // @media screen and (max-width: 768px) {
+    //   @include section-title(22.5%, 22.5%);
+    // }
+    // @media screen and (max-width: 568px) {
+    //   @include section-title(15%, 15%);
+    // }
+    // @media screen and (max-width: 480px) {
+    //   @include section-title(0%, 0%);
   }
 
   &__service-list {
     margin-top: 50px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 40px;
+    }
   }
 
   .service-list {
@@ -643,6 +698,10 @@ content-services(right)
 
       @media screen and (max-width: 768px) {
         max-width: 500px;
+      }
+
+      @media screen and (max-width: 480px) {
+        padding: 20px 0 20px;
       }
 
       // @media screen and (max-width: 1024px) {
@@ -675,6 +734,10 @@ content-services(right)
       @media screen and (max-width: 768px) {
         margin-top: 50px;
       }
+
+      @media screen and (max-width: 480px) {
+        margin-top: 20px;
+      }
     }
   }
 }
@@ -694,21 +757,21 @@ content-works(left)
   }
 
   .section-title {
-    @include section-title(36%, 36%);
+    @include section-title;
 
-    @media screen and (max-width: 1024px) {
-      @include section-title(31.5%, 31.5%);
-    }
-    @media screen and (max-width: 768px) {
-      @include section-title(25%, 25%);
-    }
+    // @media screen and (max-width: 1024px) {
+    //   @include section-title(31.5%, 31.5%);
+    // }
+    // @media screen and (max-width: 768px) {
+    //   @include section-title(25%, 25%);
+    // }
 
-    @media screen and (max-width: 568px) {
-      @include section-title(20%, 20%);
-    }
-    @media screen and (max-width: 480px) {
-      @include section-title(6%, 6%);
-    }
+    // @media screen and (max-width: 568px) {
+    //   @include section-title(20%, 20%);
+    // }
+    // @media screen and (max-width: 480px) {
+    //   @include section-title(6%, 6%);
+    // }
 
     &--left {
       // width: 105%;
@@ -719,7 +782,7 @@ content-works(left)
     margin-top: 75px;
 
     @media screen and (max-width: 768px) {
-      margin-top: 45px;
+      margin-top: 60px;
     }
   }
 
@@ -735,10 +798,11 @@ content-works(left)
     }
 
     &__card-container {
-      width: 330px;
-      padding: 0 10px 0;
+      // width: 330px;
+      padding: 0 20px 0;
 
       @media screen and (max-width: 768px) {
+        padding: 0;
         + .card-list__card-container {
           margin-top: 60px;
         }
@@ -819,6 +883,10 @@ content-works(left)
       overflow-y: scroll;
       height: 100vh;
       text-align: center;
+
+      @media screen and (max-width: 768px) {
+        width: 90%;
+      }
     }
 
     &__image {
@@ -846,7 +914,7 @@ content-contact
   }
 
   .section-title {
-    @include section-title(38%, 38%);
+    @include section-title;
   }
 
   &__inner {
